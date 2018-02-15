@@ -103,7 +103,7 @@ app.post("/users",(req,res)=>{
 
     user.save().then(()=>{
 
-        user.generateAuthToken()
+        user.generateAuthToken();
     })
     .then((token)=>{
         res.header('x-auth',token).send(user.toJSON());
